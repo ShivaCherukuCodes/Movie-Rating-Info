@@ -18,6 +18,32 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Jakarta Validation API (for @Min, @Max, @NotBlank)
+	implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+
+	// Hibernate Validator (Reference Implementation)
+	implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
+
+	// Required for Hibernate Validator
+	implementation 'org.glassfish:jakarta.el:4.0.2'
+
+	// Lombok (if not already added)
+	implementation 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+	// JUnit 5
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+
+	// Spring Boot Test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Mockito
+	testImplementation 'org.mockito:mockito-core:5.2.0'
+	testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
 }
 
 tasks.named('test') {
